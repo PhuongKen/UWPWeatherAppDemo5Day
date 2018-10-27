@@ -9,42 +9,36 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
                         >
 
-
     <StackPanel>
-        <TextBlock x:ConnectionId='2' x:Name="CityTextBlock" FontSize="50" HorizontalAlignment="Center"/>
-        <GridView x:ConnectionId='3' ItemsSource="{Binding collection}" x:Name="ForeCastGridView" 
-                      HorizontalAlignment="Center">
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Name="DateTextBlock" Text="{Binding dt_txt}"/>
-                        <Image x:Name="IconWeather" Source="Assets/Weather/03d.png" Width="200" Height="200"/>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Nhiệt độ hiện tại:"/>
-                            <TextBlock Text="    "/>
-                            <TextBlock Name="TempTextBlock" Text="{Binding main.temp}"/>
-                            <TextBlock Text="&#186;"/>
-                            <TextBlock Text="C"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Nhiệt độ thấp nhất:"/>
-                            <TextBlock Text="   "/>
-                            <TextBlock Name="TempMinTextBlock" Text="{Binding main.temp_min}"/>
-                            <TextBlock Text="&#186;"/>
-                            <TextBlock Text="C"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Nhiệt độ cao nhất:"/>
-                            <TextBlock Text="    "/>
-                            <TextBlock Name="TempMaxTextBlock" Text="{Binding main.temp_max}"/>
-                            <TextBlock Text="&#186;"/>
-                            <TextBlock Text="C"/>
-                        </StackPanel>
-                        <TextBlock Name="DescriptionTextBlock" Text="{Binding weather[0].description}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
+        <TextBlock x:ConnectionId='2' Name="CityTextBlock" FontSize="50" HorizontalAlignment="Center"/>
+
+        <StackPanel Background="Brown" HorizontalAlignment="Center">
+            <TextBlock x:ConnectionId='3' Name="DateTextBlock" Text="Hôm nay" Margin="0,20,0,0"/>
+            <Image x:ConnectionId='4' Name="ResultImage"  Width="200" Height="200"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Nhiệt độ hiện tại:"/>
+                <TextBlock Text="    "/>
+                <TextBlock x:ConnectionId='8' Name="TempTextBlock"/>
+                <TextBlock Text="&#186;"/>
+                <TextBlock Text="C"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Nhiệt độ thấp nhất:"/>
+                <TextBlock Text="   "/>
+                <TextBlock x:ConnectionId='7' Name="TempMinTextBlock"/>
+                <TextBlock Text="&#186;"/>
+                <TextBlock Text="C"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Nhiệt độ cao nhất:"/>
+                <TextBlock Text="    "/>
+                <TextBlock x:ConnectionId='6' Name="TempMaxTextBlock"/>
+                <TextBlock Text="&#186;"/>
+                <TextBlock Text="C"/>
+            </StackPanel>
+            <TextBlock x:ConnectionId='5' Name="DescriptionTextBlock"/>
+        </StackPanel>
     </StackPanel>
+
 </Page>
 

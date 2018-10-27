@@ -31,13 +31,13 @@
     <AppXManifest Include="E:\Sem 3\WeatherAppDemo5Day\WeatherAppDemo5Day\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-25T16:57:42.526</Modified>
+      <Modified>2018-10-27T02:27:40.900</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Sem 3\WeatherAppDemo5Day\WeatherAppDemo5Day\bin\x86\Debug\WeatherAppDemo5Day.exe">
       <PackagePath>entrypoint\WeatherAppDemo5Day.exe</PackagePath>
-      <Modified>2018-10-25T16:57:42.138</Modified>
+      <Modified>2018-10-27T02:27:40.274</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -607,23 +607,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Sem 3\WeatherAppDemo5Day\WeatherAppDemo5Day\bin\x86\Debug\WeatherAppDemo5Day.xr.xml">
       <PackagePath>WeatherAppDemo5Day.xr.xml</PackagePath>
-      <Modified>2018-10-25T16:56:33.974</Modified>
+      <Modified>2018-10-27T01:34:41.445</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Sem 3\WeatherAppDemo5Day\WeatherAppDemo5Day\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-10-25T15:44:00.590</Modified>
+      <Modified>2018-10-27T01:25:00.101</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Sem 3\WeatherAppDemo5Day\WeatherAppDemo5Day\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-10-25T15:44:00.591</Modified>
+      <Modified>2018-10-27T01:25:00.101</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Sem 3\WeatherAppDemo5Day\WeatherAppDemo5Day\bin\x86\Debug\Weather5Day.xbf">
       <PackagePath>Weather5Day.xbf</PackagePath>
-      <Modified>2018-10-25T16:56:34.037</Modified>
+      <Modified>2018-10-27T02:13:20.427</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Sem 3\WeatherAppDemo5Day\WeatherAppDemo5Day\bin\x86\Debug\WeatherDay.xbf">
       <PackagePath>WeatherDay.xbf</PackagePath>
-      <Modified>2018-10-25T16:56:34.038</Modified>
+      <Modified>2018-10-27T02:27:40.037</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -632,11 +632,11 @@
     <AppxPackagedFile Include="E:\Sem 3\WeatherAppDemo5Day\WeatherAppDemo5Day\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-25T15:44:05.464</Modified>
+      <Modified>2018-10-27T02:13:24.461</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Sem 3\WeatherAppDemo5Day\WeatherAppDemo5Day\bin\x86\Debug\Core\WeatherAppDemo5Day.exe">
       <PackagePath>WeatherAppDemo5Day.exe</PackagePath>
-      <Modified>2018-10-25T16:57:42.524</Modified>
+      <Modified>2018-10-27T02:27:40.895</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

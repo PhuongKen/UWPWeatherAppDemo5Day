@@ -10,14 +10,7 @@ using System.Threading.Tasks;
 
 namespace WeatherAppDemo5Day
 {
-    public class ListWeather
-    {
-        public string icon { get; set; }
-        public string temp { get; set; }
-        public string description { get; set; }
-        public string name { get; set; }
-        public string date { get; set; }
-    }
+    
     class APIManager
     {
         public async static Task<RootObject> GetWeather(double lat, double lon)
@@ -35,7 +28,22 @@ namespace WeatherAppDemo5Day
 
             return data;
         }
-        
+
+        public async static Task<RootObject> GetWeatherDay(double lat, double lon)
+        {
+            var http = new HttpClient();
+            var url = String.Format("http://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&mode=json&units=metric&appid=99966711973c1912633344cde47d99d4", lat, lon);
+            var response = await http.GetAsync(url); // Nhan data user tu weathermap.org
+            var result = await response.Content.ReadAsStringAsync();
+
+            var serializer = new DataContractJsonSerializer(typeof(RootObject));
+            // Khoi tao Stream local de doc json
+            var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
+            // Doc object da phan tich duoc tu json vao stream local de phan tich
+            var data = (RootObject)serializer.ReadObject(ms);
+
+            return data;
+        }
     }
 
     
@@ -66,25 +74,24 @@ namespace WeatherAppDemo5Day
         public int all { get; set; }
     }
 
-   
+    
     public class Wind
     {
         public double speed { get; set; }
         public double deg { get; set; }
     }
 
-    
+  
     public class Rain
     {
         public double? __invalid_name__3h { get; set; }
     }
 
-    
+   
     public class Sys
     {
         public string pod { get; set; }
     }
-
     
     public class List
     {
@@ -114,7 +121,6 @@ namespace WeatherAppDemo5Day
         public string country { get; set; }
         public int population { get; set; }
     }
-
     
     public class RootObject
     {
@@ -123,6 +129,10 @@ namespace WeatherAppDemo5Day
         public int cnt { get; set; }
         public List<List> list { get; set; }
         public City city { get; set; }
-        public Weather weather { get; set; }
+        public Coord coord { get; set; }
+        public List<Weather> weather { get; set; }
+        public Main main { get; set; }
+        public string name { get; set; }
+        
     }
 }

@@ -11,15 +11,14 @@
 
     <ScrollViewer>
         <StackPanel>
-        <TextBlock x:Name="CityTextBlock" FontSize="50" HorizontalAlignment="Center"/>
-        <!--<Image Name="ResultImage"  Width="200" Height="200" HorizontalAlignment="Center"/>-->
-        <GridView ItemsSource="{Binding collection}" x:Name="ForeCastGridView" 
+            <TextBlock x:Name="CityTextBlock" FontSize="50" HorizontalAlignment="Center"/>
+            <GridView ItemsSource="{Binding collection}" x:Name="ForeCastGridView" 
                       HorizontalAlignment="Center">
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Name="DateTextBlock" Text="{Binding dt_txt}"/>
-                        <Image x:Name="IconWeather" Source="Assets/Weather/03d.png" Width="200" Height="200"/>
+                    <StackPanel Background="Brown">
+                            <TextBlock Name="DateTextBlock" Text="{Binding dt_txt}" Margin="0,20,0,0"/>
+                        <Image x:Name="IconWeather" Source="{Binding weather[0].icon}" Width="200" Height="200"/>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Nhiệt độ hiện tại:"/>
                             <TextBlock Text="    "/>

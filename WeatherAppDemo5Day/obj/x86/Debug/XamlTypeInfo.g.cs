@@ -357,7 +357,6 @@ namespace WeatherAppDemo5Day.WeatherAppDemo5Day_XamlTypeInfo
             case 16:   //  WeatherAppDemo5Day.WeatherDay
                 userType = new global::WeatherAppDemo5Day.WeatherAppDemo5Day_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_16_WeatherDay;
-                userType.AddMemberName("collection");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -496,16 +495,6 @@ namespace WeatherAppDemo5Day.WeatherAppDemo5Day_XamlTypeInfo
             var that = (global::WeatherAppDemo5Day.Weather5Day)instance;
             that.collection = (global::System.Collections.ObjectModel.ObservableCollection<global::WeatherAppDemo5Day.List>)Value;
         }
-        private object get_13_WeatherDay_collection(object instance)
-        {
-            var that = (global::WeatherAppDemo5Day.WeatherDay)instance;
-            return that.collection;
-        }
-        private void set_13_WeatherDay_collection(object instance, object Value)
-        {
-            var that = (global::WeatherAppDemo5Day.WeatherDay)instance;
-            that.collection = (global::System.Collections.ObjectModel.ObservableCollection<global::WeatherAppDemo5Day.List>)Value;
-        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -591,12 +580,6 @@ namespace WeatherAppDemo5Day.WeatherAppDemo5Day_XamlTypeInfo
                 xamlMember = new global::WeatherAppDemo5Day.WeatherAppDemo5Day_XamlTypeInfo.XamlMember(this, "collection", "System.Collections.ObjectModel.ObservableCollection`1<WeatherAppDemo5Day.List>");
                 xamlMember.Getter = get_12_Weather5Day_collection;
                 xamlMember.Setter = set_12_Weather5Day_collection;
-                break;
-            case "WeatherAppDemo5Day.WeatherDay.collection":
-                userType = (global::WeatherAppDemo5Day.WeatherAppDemo5Day_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WeatherAppDemo5Day.WeatherDay");
-                xamlMember = new global::WeatherAppDemo5Day.WeatherAppDemo5Day_XamlTypeInfo.XamlMember(this, "collection", "System.Collections.ObjectModel.ObservableCollection`1<WeatherAppDemo5Day.List>");
-                xamlMember.Getter = get_13_WeatherDay_collection;
-                xamlMember.Setter = set_13_WeatherDay_collection;
                 break;
             }
             return xamlMember;

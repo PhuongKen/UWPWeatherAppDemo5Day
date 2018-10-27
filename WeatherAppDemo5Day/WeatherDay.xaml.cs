@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -27,30 +26,33 @@ namespace WeatherAppDemo5Day
         public WeatherDay()
         {
             this.InitializeComponent();
-            collection = new ObservableCollection<List>();
-            this.DataContext = this;
         }
 
-        public ObservableCollection<List> collection { get; set; }
-        
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            var postion = await LocationData.getPosition();
-
-            var lat = postion.Coordinate.Latitude;
-            var lon = postion.Coordinate.Longitude;
-            
-            RootObject forecast = await APIManager.GetWeather(lat, lon);
-
-            CityTextBlock.Text = forecast.city.name + " City";
-
-            for (int i = 0; i < 1; i++)
+            try
             {
-                string icon = String.Format("ms-appx:/Assets/Weather/{0}.png", forecast.list[i].weather[i].icon);
-                var icon1 = new BitmapImage(new Uri(icon, UriKind.Absolute));
-                collection.Add(forecast.list[i]);
+                var postion = await LocationData.getPosition();
+
+                var lat = postion.Coordinate.Latitude;
+                var lon = postion.Coordinate.Longitude;
+
+                RootObject myWeather = await APIManager.GetWeatherDay(lat, lon);
+
+                string icon = String.Format("ms-appx:/Assets/Weather/{0}.png", myWeather.weather[0].icon);
+
+                ResultImage.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
+
+                TempTextBlock.Text = ((double)myWeather.main.temp).ToString();
+                DescriptionTextBlock.Text = myWeather.weather[0].description;
+                TempMinTextBlock.Text = ((double)myWeather.main.temp_min).ToString();
+                TempMaxTextBlock.Text = ((double)myWeather.main.temp_max).ToString();
+                CityTextBlock.Text = myWeather.name;
             }
-            ForeCastGridView.ItemsSource = collection;
+            catch
+            {
+
+            }
         }
     }
 }
